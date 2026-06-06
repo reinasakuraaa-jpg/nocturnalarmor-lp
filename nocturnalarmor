@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOCTURNAL ARMOR | 10年後の私へ贈る、確信の一点</title>
+    <style>
+/* ボタン下の注釈専用のスタイル */
+        .btn-note {
+            display: block;       /* 改行してボタンの下に配置 */
+            font-size: 0.75rem;   /* 文字を小さく（0.75rem = 約12px） */
+            margin-top: 15px;     /* ボタンとの間に少し隙間を作る */
+            opacity: 0.9;         /* 少し薄くして「補足感」を出す */
+            line-height: 1.6;     /* 行間を整えて読みやすく */
+            color: #ffffff;       /* 背景が濃い色なので白に */
+            letter-spacing: 0.05em;
+        }
+
+        /* スマホでの微調整 */
+        @media (max-width: 768px) {
+            .btn-note {
+                font-size: 0.7rem; /* スマホではさらに一回り小さく */
+                padding: 0 10px;    /* 画面端に当たらないように */
+            }
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+        :root {
+            --bg-deep: #2a1f19;       /* リッチで重厚なディープゴールドブラウン */
+            --gold-champagne: #c5a059; /* 上品に輝くシャンパンゴールド */
+            --premium-beige: #fcfaf6;  /* 明るく柔らかな最高級ベージュ */
+            --text-main: #2c221e;      /* 知性を感じる深みのエスプレッソブラウン */
+            --text-sub: #5a4f4a;       /* 読みやすいミディアムブラウン */
+            --bg-light-box: #f5f0e6;   /* セクションのメリハリをつけるライトベージュ */
+            --btn-accent: #0b6646;     /* ゴールドに映える洗練されたクラシックエメラルド */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-main);
+            background-color: var(--premium-beige);
+            line-height: 1.8;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Marcellus', serif;
+            font-weight: normal;
+            letter-spacing: 0.12em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(42, 31, 25, 0.55), rgba(42, 31, 25, 0.65)), 
+                        url('https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { 
+            font-size: 2.8rem; 
+            line-height: 1.4; 
+            margin-bottom: 25px; 
+            word-break: normal; 
+            overflow-wrap: anywhere; 
+        }
+        .hero p { font-size: 1.05rem; letter-spacing: 0.2em; opacity: 0.95; }
+
+        /* Philosophy */
+        .message-section { text-align: center; }
+        .message-section h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 30px; }
+        .message-section p { max-width: 800px; margin: 0 auto; color: var(--text-sub); text-align: left; }
+
+        /* Gallery Grid */
+        .gallery-bg { background-color: var(--bg-deep); color: #fff; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 50px; 
+            align-items: stretch;
+        }
+        .card { 
+            border: 1px solid rgba(197, 160, 89, 0.3); 
+            background: rgba(255, 255, 255, 0.04); 
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .card img { 
+            width: 100%; 
+            height: 280px;          /* 実際の指輪の細部が見えやすいよう、少し高さを広げました */
+            object-fit: contain;    
+            object-position: center; 
+            background-color: #fdfbfa; 
+            box-sizing: border-box;
+            padding: 15px;          /* 余白を少し広げて、よりジュエリーが引き立つ上品なフレーミングに */
+        }
+        .card-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { color: var(--gold-champagne); font-size: 1.25rem; margin-bottom: 15px; min-height: 3em; display: flex; align-items: center; }
+        .card-body p { color: #f5f0e6; }
+
+        /* Assemble Logic Box */
+        .assemble-box { display: flex; align-items: center; gap: 50px; background: var(--bg-light-box); padding: 50px; margin-top: 60px; }
+        .assemble-text { flex: 1.2; }
+        .assemble-img { flex: 0.8; height: 400px; object-fit: cover; box-shadow: 15px 15px 0 var(--gold-champagne); }
+
+        /* Ceremony Steps */
+        .step-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 50px; align-items: stretch; }
+        .step-item { background: #fff; padding: 30px 20px; text-align: center; border-bottom: 4px solid var(--gold-champagne); display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(44, 34, 30, 0.04); }
+        .step-num { font-family: 'Marcellus', serif; font-size: 0.9rem; color: var(--gold-champagne); margin-bottom: 10px; font-weight: bold; }
+        .step-item h4 { font-size: 1.05rem; color: var(--text-main); margin-bottom: 15px; min-height: 2.5em; display: flex; align-items: center; justify-content: center; }
+        .step-item h4 span { display: inline-block; white-space: nowrap; }
+        .step-item p { flex-grow: 1; margin-bottom: 20px; font-size: 0.85rem; text-align: left; min-height: 5.4em; color: var(--text-sub); }
+        .payment-label { background: #fffbf2; font-size: 0.8rem; padding: 10px; border-left: 3px solid var(--gold-champagne); text-align: left; margin-top: auto; min-height: 5.2em; display: flex; flex-direction: column; justify-content: center; color: var(--text-main); line-height: 1.5; }
+        .payment-note { font-size: 0.7rem; opacity: 0.8; margin-top: 4px; font-weight: normal; }
+
+        /* FAQ */
+        .faq-section { background-color: var(--bg-light-box); padding: 60px 0; border-radius: 4px; margin-top: 40px; }
+        .faq-container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            text-align: left; 
+        }
+        .faq-item { margin-bottom: 40px; border-bottom: 1px solid rgba(44, 34, 30, 0.1); padding-bottom: 20px; }
+        .faq-q { font-weight: bold; color: var(--text-main); font-size: 1.15rem; margin-bottom: 10px; display: flex; align-items: flex-start; }
+        .faq-q::before { content: "Q. "; color: var(--gold-champagne); margin-right: 5px; font-family: 'Marcellus', serif; }
+        .faq-a { font-size: 0.95rem; color: var(--text-sub); line-height: 1.9; }
+
+        /* CTA */
+        .cta { background-color: var(--bg-deep); color: #fff; text-align: center; padding: 100px 20px; }
+        .btn { display: inline-block; background: var(--btn-accent); color: #fff; padding: 20px 60px; text-decoration: none; font-size: 1.2rem; transition: 0.4s; margin-top: 40px; letter-spacing: 0.15em; border-radius: 4px; font-weight: 500; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+        /* --- 改行調整用の追加スタイル --- */
+        .sp-only { display: none; } /* PCでは非表示 */
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .step-row { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .sp-only { display: inline; }
+
+            .hero h1 { 
+                font-size: 1.6rem; 
+                line-height: 1.5; 
+                padding: 0 5px; 
+                word-break: break-all; 
+            }
+            .container { padding: 60px 0; }
+            .message-section h2 { font-size: 1.5rem; }
+            .assemble-box { flex-direction: column; padding: 30px; gap: 30px; }
+            .assemble-img { width: 100%; height: 300px; }
+            .step-row { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; }
+            .card-body h3, .step-item h4 { min-height: auto; }
+
+            .faq-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0 10px;
+            }
+            .faq-q { 
+                font-size: 0.95rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <p>nocturnal armor | Premium Line</p>
+            <h1>10年後も、この輝きを<br class="sp-only">愛せる。<br>
+            そんな確信を持てる<br class="sp-only">一点を。</h1>
+            <p>本物が似合う自分でありたい。<br>
+その想いに、嘘をつかない。</p>
+        </div>
+    </section>
+
+    <section class="container message-section">
+        <h2>自分を丁寧に扱うことは、<br>自分を誇ること。</h2>
+        <p>
+            「軽やかな華やかさも、もちろん大好き。でも、今の私に必要なのは、背筋をスッと伸ばしてくれるような確かな価値と、深い輝きでした。」<br><br>
+            かつてのアクセサリーに物足りなさを感じるのは、あなたが着実に人生のステージを歩んできた証拠です。<br>
+            今のあなたの肌と心に寄り添い、10年後のあなたにも「選んで良かった」と誇っていただけるジュエリーを。<br><br>
+            最高級の地金と、宿命を読み解く知性。その融合から生まれる「確信」をお届けします。
+        </p>
+    </section>
+
+    <section class="gallery-bg">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 60px;">MATERIAL STRATEGY</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="item1.png" alt="ペリドットと淡水パールのフラワーリング">
+                    <div class="card-body">
+                        <h3>普遍的な素材の価値</h3>
+                        <p>一生色褪せない資産価値としてのゴールドとプラチナ。流行に左右されず、あなたの日常と格を物理的に支え続けます。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="item2.png" alt="シトリンのオーバルクラスターリング">
+                    <div class="card-body">
+                        <h3>独自の目利き</h3>
+                        <p>ヴィンテージパーツや宝石を、独自の審美眼で構築（アセンブル）。素材の組み合わせとバランスに最大の価値を置く、一点物の贅沢です。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="item3.png" alt="ブルージルコンのサンバーストリング">
+                    <div class="card-body">
+                        <h3>宿命によるカラー＆素材選定</h3>
+                        <p>算命学（帝王学）の観点から、あなたを輝かせる色や素材をご提案。身に着けることが、自己肯定の儀式となります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="assemble-box">
+            <div class="assemble-text">
+                <h2 style="color: var(--text-main); margin-bottom: 30px;">嘘のない素材を、<br>納得のいく形で。</h2>
+                <p style="color: var(--text-sub); font-size: 0.95rem;">
+                    本ラインでは、高品質なK18/Ptパーツをベースに、希少なパーツを組み合わせる「アセンブル方式」を採用しています。ゼロからの金属加工を省くことで、最高級素材を最良の形、かつ適正な工期でお届けします。<br><br>
+                    複雑に飾るのではなく、素材の力そのものであなたを格上げする。私自身が日々愛用し、その輝きに支えられているからこそ、自信を持ってご提案します。
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop" alt="K18 Necklace" class="assemble-img">
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 20px;">THE CEREMONY</h2>
+        <p style="text-align: center; opacity: 0.7; margin-bottom: 60px;">「相談」から「納品」まで。安心して進めていただくための4つのステップ</p>
+
+        <div class="step-row">
+            <div class="step-item">
+                <div class="step-num">01</div>
+                <h4><span>【個別相談】</span><span>まずはZoomで。</span></h4>
+                <p>無料相談から。あなたの想いやご予算、算命学による簡易カラー診断を行い、制作の方向性を決めていきます。</p>
+                <div class="payment-label">
+                    <strong>【相談料：無料】</strong>
+                    <span class="payment-note">オンラインで全国対応。</span>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">02</div>
+                <h4><span>【素材選定】</span><span>質感に触れる。</span></h4>
+                <p>都内ラウンジにて（zoom対応可）。素材サンプルや対話を通じて「あなただけの一点」を具体的にご提案します。</p>
+                <div class="payment-label">
+                    <strong>【直接対面：5,500円】</strong>
+                    <span class="payment-note">（Zoomは無料）<br>※オーダー成約時に充当。</span>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">03</div>
+                <h4><span>【製作開始】</span><span>オーダーの確定。</span></h4>
+                <p>ご提案に納得いただけた場合のみ確定。厳選した素材を、熟練の職人の手で、あなただけの一点へと丁寧に仕立ててまいります。楽しみにお待ちください。</p>
+                <div class="payment-label">
+                    <strong>【内金決済】</strong>
+                    <span class="payment-note">銀行振込・各種カード対応<br>※分割払いは個別相談可</span>
+                </div>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-num">04</div>
+                <h4><span>【完成納品】</span><span>満月の輝きを。</span></h4>
+                <p>満月の日に仕上げ、あなたの吉日に発送。手にした瞬間、自分への誇りを確信していただけることでしょう。</p>
+                <div class="payment-label">
+                    <strong>【残金決済】</strong>
+                    <span class="payment-note">銀行振込・各種カード対応<br>お支払い確認後に発送します。</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container faq-section">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 50px; font-family: 'Marcellus', serif;">FAQ</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <p class="faq-q">相談したら、<br class="sp-only">必ず購入しなければいけませんか？</p>
+                <p class="faq-a">いいえ。10年後も愛せる「確信」を持っていただきたいので、ご提案に納得がいかない場合は遠慮なくお見送りください。まずは「自分に合うものを知る」ための時間として気軽にご活用ください。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">なぜ対面セッション料（5,500円）がかかるのですか？</p>
+                <p class="faq-a">
+                    お客様のために「最良の空間」と「実物の体験」を準備するためです。都内ラウンジの確保や、画面越しでは伝わらない地金の「物理的な質感・輝き」を確認するためのコストが含まれます。成約時には商品代に充当いたします。
+                </p>
+            </div>
+            <div class="faq-item" style="border-bottom: none;">
+                <p class="faq-q">具体的な予算はどのくらいですか？</p>
+                <p class="faq-a">素材やデザインにより異なりますが、K18・プラチナを主軸としたプレミアムラインは20万円〜を目安としております。資産価値としての地金価格を含め、詳細はセッション時にご提示いたします。</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="cta">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">次は、暦が巡るタイミングで。</h2>
+            <p style="max-width: 750px; margin: 0 auto; opacity: 0.8;">
+                お一人ずつの宿命と深く向き合い、最良のタイミングで製作を行うため、<br>
+                ひと月に対応できるのは【3名様のみ】とさせていただいております。<br><br>
+                10年後の自分へ、確信に満ちた輝きを。
+            </p>
+            
+            <a href="https://line.me/ti/p/@883jgscw" class="btn" target="_blank" rel="noopener">公式LINEから優先予約</a>
+            
+            <span class="btn-note">
+                ※ボタンを押した後、トーク画面に <br class="sp-only"><strong>「オーダー会希望」</strong> と入力して送信してください。<br>
+                自動で詳細・ヒアリングシートが届きます。
+            </span>
+        </div>
+    </section>
+
+</body>
+</html>
